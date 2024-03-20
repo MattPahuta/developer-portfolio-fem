@@ -1,0 +1,151 @@
+/*
+Author: Matt Pahuta
+https://www.mattpahuta.com
+Date: March 2024
+*/
+/* **************** */
+/* Custom Variables */
+/* **************** */
+:root {
+  /* Fonts */
+  --ff-primary: 'Space Grotesk', sans-serif;
+  /* 
+    <uniquifier>: Use a unique and descriptive class name
+    <weight>: Use a value from 300 to 700
+    .space-grotesk-<uniquifier> {
+      font-family: "Space Grotesk", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: <weight>;
+      font-style: normal;
+    } 
+*/
+
+  /* Font Sizes */
+  /* ToDo: convert to meaningful var names */
+  --fs-16: 1rem;
+  --fs-18: 1.125rem;
+  --fs-24: 1.5rem;
+  --fs-32: 2rem;
+  --fs-40: 2.5rem;
+  --fs-48: 3rem;
+  --fs-72: 4.5rem;
+  --fs-88: 5.5rem;
+
+  /* Colors */
+  --clr-black: hsl(0, 0%, 8%);
+  --clr-white: hsl(0, 0%, 100%);
+  --clr-dark-gray: hsl(0, 0%, 14%);
+  --clr-gray: hsl(0, 0%, 59%);
+  --clr-accent: hsl(153, 71%, 59%);
+  --clr-warning: hsl(7, 100%, 68%);
+
+  /* Utilities */
+  --container: 69.375rem;
+
+  /* Border radius */
+  --br-soft: 1rem;
+  --br-round: 50%;
+}
+
+/* RESET */
+/* Josh Comeau custom css reset */
+/* https://www.joshwcomeau.com/css/custom-css-reset/ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/* Base Styles */
+body {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: var(--fs-body);
+  line-height: 1.56;
+
+  background-color: var(--clr-black);
+  color: var(--clr-white);
+}
+
+/* Components and Utility Classes */
+
+.wrapper {
+  margin-inline: auto;
+  width: calc(100% - 2rem);
+  max-width: var(--container);
+}
+
+a:hover {
+  color: var(--clr-accent);
+}
+
+/* tablet and above */
+@media (min-width: 40em) { /* 640px */
+  .wrapper {
+    width: calc(100% - 3.75rem); /* 30px each side */
+  }
+}
+
+/* Header */
+.header {
+
+}
+
+.title-link {
+  /* 24, 32 */
+  font-size: clamp(1.5rem, 1rem + 2vw, 2rem);
+  color: var(--clr-white);
+  text-decoration: none;
+}
+
+.social-link {
+  display: inline-block;
+}
+
+.social-icon:hover path {
+  fill: var(--clr-accent);
+}
