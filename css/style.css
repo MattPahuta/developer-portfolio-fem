@@ -41,6 +41,7 @@ Date: March 2024
 
   /* Utilities */
   --container: 69.375rem;
+  --transition-primary: 200ms ease-in-out;
 
   /* Border radius */
   --br-soft: 1rem;
@@ -112,11 +113,23 @@ body {
 }
 
 /* Components and Utility Classes */
+.visually-hidden {
+  position: absolute;
+  left:     -10000px;
+  top:      auto;
+  width:    1px;
+  height:   1px;
+  overflow: hidden;
+}
 
 .wrapper {
   margin-inline: auto;
   width: calc(100% - 2rem);
   max-width: var(--container);
+}
+
+a {
+  transition: color var(--transition-primary);
 }
 
 a:hover {
@@ -132,20 +145,51 @@ a:hover {
 
 /* Header */
 .header {
+  padding-top: 20px;
+}
 
+.header__nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 20px;
 }
 
 .title-link {
   /* 24, 32 */
   font-size: clamp(1.5rem, 1rem + 2vw, 2rem);
+  line-height: 1;
   color: var(--clr-white);
   text-decoration: none;
 }
 
-.social-link {
-  display: inline-block;
+.socials-list {
+  padding: 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
 }
 
-.social-icon:hover path {
+.social-icon > path {
+  transition: fill var(--transition-primary);
+}
+
+.social-icon:hover > path {
   fill: var(--clr-accent);
+}
+
+@media (min-width: 40em) { /* 640px */
+  .header {
+    padding-top: 30px;
+  }
+  .header__nav {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .socials-list {
+    gap: 32px;
+  }
 }
