@@ -30,8 +30,6 @@ Users should be able to:
 
 ![](./screenshot.jpg)
 
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
-
 
 ### Links
 
@@ -47,10 +45,6 @@ Add a screenshot of your solution. The easiest way to do this is to use Firefox 
 - Flexbox
 - CSS Grid
 - Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
 
 ### What I learned
 
@@ -78,8 +72,8 @@ Use this section to outline areas that you want to continue focusing on in futur
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - I made quite a few different choices as what Jessica went with, but her video walkthrough of the project is immensely useful for those learning more advanced CSS and for getting a sense of how an experienced developer would tackle a project like this.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+- [Example resource 1](https://www.example.com) - Part way into my development of this project, I found Jessica Chan's video walkthrough on YouTube. I made quite a few different choices as what Jessica went with, but her video walkthrough of the project is immensely useful for those learning more advanced CSS and for getting a sense of how an experienced developer would tackle a project like this.
+- [ModernCSS](https://moderncss.dev/css-button-styling-guide/) - Stephanie Eckles's button styling guid is something I keep coming back to over and over again. This project was no different.
 
 
 ## Author
@@ -93,3 +87,5 @@ Use this section to outline areas that you want to continue focusing on in futur
 ## Acknowledgments
 
 This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
+
+As mentioned above, part way along my development of this project I reviewed Jessica Chan's approach to the challenge. I want to call out several areas of the code I ended up revising based on the approach Jessica took, Including my somewhat clumsy implementation of the uderline text-decoration of the hero accent text in favor of her background-image w/linear-gradient solution. However, for the links with similar accent styles, I went with something closer to Stephanie Eckles' approach to styling links as buttons.

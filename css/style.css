@@ -41,7 +41,7 @@ Date: March 2024
 
   /* Utilities */
   --container: 69.375rem;
-  --transition-primary: 200ms ease-in-out;
+  --transition-primary: 220ms ease-in-out;
 
   /* Border radius */
   --br-soft: 1rem;
@@ -115,10 +115,10 @@ body {
 /* Components and Utility Classes */
 .visually-hidden {
   position: absolute;
-  left:     -10000px;
-  top:      auto;
-  width:    1px;
-  height:   1px;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
   overflow: hidden;
 }
 
@@ -134,10 +134,50 @@ a {
 
 a:hover {
   color: var(--clr-accent);
+  cursor: pointer;
+}
+
+.accent-underline {
+  /* border-bottom: 4px solid var(--clr-accent); */
+  /* text-decoration: underline;
+  text-decoration-thickness: 4px;
+  text-decoration-color: var(--clr-accent);
+  text-underline-offset: 0.22em; */
+  background-image: linear-gradient(
+    to right,
+    var(--clr-accent) 75%,
+    var(--clr-accent) 75%
+  );
+  background-position: 0 1.18em;
+  background-repeat: repeat-x;
+  background-size: 8px 4px;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--clr-white);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 700;
+  line-height: 1.625;
+  letter-spacing: 2.3px;
+  text-align: center;
+  padding: 10px 0;
+  border-bottom: 2px solid var(--clr-accent);
+}
+
+.button:focus {
+  outline-style: solid;
+  outline-color: transparent;
+  box-shadow: 0 0 0 2px var(--clr-accent);
+  border: none;
 }
 
 /* tablet and above */
-@media (min-width: 40em) { /* 640px */
+@media (min-width: 40em) {
+  /* 640px */
   .wrapper {
     width: calc(100% - 3.75rem); /* 30px each side */
   }
@@ -146,6 +186,8 @@ a:hover {
 /* Header */
 .header {
   padding-top: 20px;
+  position: relative;
+  z-index: 100;
 }
 
 .header__nav {
@@ -181,7 +223,8 @@ a:hover {
   fill: var(--clr-accent);
 }
 
-@media (min-width: 40em) { /* 640px */
+@media (min-width: 40em) {
+  /* 640px */
   .header {
     padding-top: 30px;
   }
@@ -192,4 +235,73 @@ a:hover {
   .socials-list {
     gap: 32px;
   }
+}
+
+/* Hero Section */
+.hero {
+}
+.hero-wrapper {
+  padding-bottom: 80px;
+  border-bottom: 1px solid var(--clr-gray);
+}
+
+.hero-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin-inline: auto;
+  max-width: 174px;
+}
+
+.hero-text {
+  position: relative;
+  margin-top: 330px;
+  text-align: center;
+}
+
+.hero-headline {
+  margin-bottom: 20px;
+  font-size: var(--fs-40);
+  line-height: 1;
+  letter-spacing: -1.14px;
+}
+
+.hero-description {
+  margin-bottom: 20px;
+}
+
+
+
+.hero-description {
+  color: var(--clr-gray);
+}
+
+
+
+@media (min-width: 40em) {
+  .hero-img {
+    max-width: 322px;
+  }
+  .hero-headline {
+    margin-bottom: 60px;
+    font-size: var(--fs-72);
+    letter-spacing: -2.05px;
+  }
+}
+
+@media (min-width: 68.75em) {
+  .hero-img {
+    max-width: 445px;
+  }
+  .hero-headline {
+    margin-bottom: 42px;
+    font-size: var(--fs-88);
+    letter-spacing: -2.5px;
+  }
+}
+
+/* Skills */
+.skills {
+  padding: 40px 0;
 }
