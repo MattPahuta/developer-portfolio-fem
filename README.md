@@ -74,7 +74,7 @@ Use this section to outline areas that you want to continue focusing on in futur
 
 - [Coder Coder](https://www.example.com) - Part way into my development of this project, I found Jessica Chan's video walkthrough on YouTube. I made quite a few different choices as what Jessica went with, but her video walkthrough of the project is immensely useful for those learning more advanced CSS and for getting a sense of how an experienced developer would tackle a project like this.
 - [ModernCSS](https://moderncss.dev/css-button-styling-guide/) - Stephanie Eckles's button styling guid is something I keep coming back to over and over again. This project was no different.
-- [Kevin Powell](https://www.youtube.com/@KevinPowell/featured) - I began tackling the header/hero layout in a similar way Jessica approached the issue, using absolutely positioned elements. Then, I remembered a YouTube short by Kevin Powell where he talked about stacking content with grid. I didn't find the specific short (but I'm sure its in his channel somewhere) but luckily I made a note about his approach and was able to use it here.
+- [Kevin Powell](https://www.youtube.com/@KevinPowell/featured) - I began tackling the header/hero layout in a similar way Jessica approached the issue, using absolutely positioned elements. Then, I remembered a YouTube short by Kevin Powell where he talked about stacking content with grid. I didn't find the specific short (but I'm sure its in his channel somewhere) but luckily I made a note about his approach and was able to use it here. I don't know if this is necessarily more efficient or easier to understand than positioning the elements absolutely, but here it is.
 
 ## Author
 

@@ -14,7 +14,7 @@ Date: March 2024
   --fs-body: 1rem;
   --fs-24: 1.5rem;
   --fs-32: 2rem;
-  --fs-40: 2.5rem;
+  --fs-headline: 2.5rem;
   --fs-48: 3rem;
   --fs-72: 4.5rem;
   --fs-88: 5.5rem;
@@ -39,6 +39,13 @@ Date: March 2024
 @media (min-width: 40em) {
   :root {
     --fs-body: 1.125rem;
+    --fs-headline: 4.5rem;
+  }
+}
+
+@media (min-width: 68.75em) {
+  :root {
+    --fs-headline: 5.5rem;
   }
 }
 
@@ -122,14 +129,13 @@ body {
   max-width: var(--container);
 }
 
+
+
 a {
   transition: color var(--transition-primary);
 }
 
-a:hover {
-  color: var(--clr-accent);
-  cursor: pointer;
-}
+
 
 .accent-underline {
   background-image: linear-gradient(
@@ -142,13 +148,14 @@ a:hover {
   background-size: 8px 4px;
 }
 
-.button {
+a.button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   color: var(--clr-white);
   text-decoration: none;
   text-transform: uppercase;
+  font-size: 1rem;
   font-weight: 700;
   line-height: 1.625;
   letter-spacing: 2.3px;
@@ -157,7 +164,13 @@ a:hover {
   border-bottom: 2px solid var(--clr-accent);
 }
 
-.button:focus {
+a:hover,
+a.button:hover {
+  color: var(--clr-accent);
+  cursor: pointer;
+}
+
+a.button:focus {
   outline-style: solid;
   outline-color: transparent;
   box-shadow: 0 0 0 2px var(--clr-accent);
@@ -185,7 +198,17 @@ a:hover {
   }
 }
 
+@media (min-width: 68.75em) {
+  .wrapper {
+    width: 100%;
+  }
+}
+
 /* Header */
+.header {
+  margin-inline: auto;
+  max-width: var(--container);
+}
 
 .header__nav {
   padding-top: 20px;
@@ -224,9 +247,6 @@ a:hover {
 
 @media (min-width: 40em) {
   /* 640px */
-  .header {
-    padding-top: 30px;
-  }
   .header__nav {
     padding-top: 30px;
     flex-direction: row;
@@ -238,11 +258,6 @@ a:hover {
 }
 
 /* Hero Section */
-
-
-
-
-
 .hero-wrapper {
   padding-bottom: 80px;
 }
@@ -295,7 +310,7 @@ a:hover {
   margin-bottom: 20px;
   margin-inline: auto;
   max-width: 14ch;
-  font-size: var(--fs-40);
+  font-size: var(--fs-headline);
   line-height: 1;
   letter-spacing: -1.14px;
 }
@@ -309,26 +324,21 @@ a:hover {
 }
 
 @media (min-width: 40em) {
-
   .hero-wrapper {
     padding-bottom: 60px;
     padding-left: 30px;
     display: grid;
   }
-
   .hero-picture,
   .hero-text {
     grid-column: 1 / -1;
     grid-row: 1 / -1;
   }
-
   .hero-picture {
     justify-self: end;
   }
-
   .hero-img {
     max-width: 20.125rem;
-    /* margin-left: auto; */
   }
   .rings-container {
     top: 140px;
@@ -339,27 +349,32 @@ a:hover {
     top: 469px;
   }
   .hero-text {
-    /* margin-top: 142px; */
-    /* align-self: end; */
     margin: 0;
     padding-top: 142px;
     text-align: left;
     max-width: 60vw;
-  }
-  .hero-description {
-    max-width: 85%;
   }
   .headline-break {
     display: block;
   }
   .hero-headline {
     margin-bottom: 60px;
-    font-size: var(--fs-72);
+
     letter-spacing: -2.05px;
+  }
+  .hero-description {
+    max-width: 75%;
   }
 }
 
 @media (min-width: 68.75em) {
+  .header__nav {
+    padding: 40px 30px 0 0;
+  }
+  .hero-wrapper {
+    padding-left: 0;
+    padding-bottom: 100px;
+  }
   .hero-img {
     max-width: 445px;
   }
@@ -367,9 +382,13 @@ a:hover {
     display: inline;
   }
   .hero-headline {
+    margin-inline: 0;
     margin-bottom: 42px;
-    font-size: var(--fs-88);
+
     letter-spacing: -2.5px;
+  }
+  .hero-description {
+    max-width: 38ch;
   }
 }
 
