@@ -103,18 +103,21 @@
           </nav>
         </div>
         <div class="hero-wrapper">
-          <picture class="hero-picture">
-            <source
-              srcset="./assets/images/image-profile-desktop.webp"
-              media="(min-width: 68.75em)" />
-            <source
-              srcset="./assets/images/image-profile-tablet.webp"
-              media="(min-width: 40em)" />
-            <img
-              src="./assets/images/image-profile-mobile.webp"
-              alt="Headshot picture of Adam Keyes"
-              class="hero-img" />
-          </picture>
+          <div class="hero-img-container">
+            <picture>
+              <source
+                srcset="./assets/images/image-profile-desktop.webp"
+                media="(min-width: 68.75em)" />
+              <source
+                srcset="./assets/images/image-profile-tablet.webp"
+                media="(min-width: 40em)" />
+              <img
+                src="./assets/images/image-profile-mobile.webp"
+                alt="Headshot picture of Adam Keyes"
+                class="hero-img" />
+            </picture>
+            <div class="circle-container"></div>
+          </div>
           <div class="hero-text wrapper">
             <h1 class="hero-headline">
               <span class="headline-break">Nice to</span> meet you! I'm <span class="accent-underline">Adam Keyes</span>.
@@ -127,7 +130,9 @@
           </div>
         </div>
 
+        <div class="rings-container"></div>
       </header>
+
 
 
 
