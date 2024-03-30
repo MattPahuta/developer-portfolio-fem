@@ -116,8 +116,10 @@
           <div class="circle-container"></div>
         </div>
         <div class="hero-text wrapper">
+          <!-- ToDo: change hero-headline to hero-title -->
           <h1 class="hero-headline">
-            <span class="headline-break">Nice to</span> meet you! I'm <span class="accent-underline">Adam Keyes</span>.
+            <span class="headline-break">Nice to</span> meet you! I'm
+            <span class="accent-underline">Adam Keyes</span>.
           </h1>
           <p class="hero-description">
             Based in the UK, I'm a front-end developer passionate
@@ -132,8 +134,8 @@
     <main class="main">
       <!-- Skills -->
       <section class="skills wrapper skills-grid bottom-border">
-        <!-- <div class="wrapper skills-grid bottom-border"> -->
-          <h2 class="visually-hidden">Skills</h2>
+        <h2 class="visually-hidden">Skills</h2>
+        <div>
           <div class="skill-card">
             <h3 class="skill-title">HTML</h3>
             <p class="skill-meta">4 Years Experience</p>
@@ -157,30 +159,176 @@
           <div class="skill-card">
             <h3 class="skill-title">Sass</h3>
             <p class="skill-meta">3 Years Experience</p>
-          </div>        
-        <!-- </div> -->
-        <div class="rings-container rings-container__skills"></div>
+          </div>
+          <div class="rings-container rings-container__skills"></div>
+        </div>
       </section>
       <!-- Projects -->
       <section class="projects">
         <div class="wrapper">
-          <h2>Projects</h2>
-          <a href="" class="button">Contact me</a> 
-          Design portfolio HTML CSS View project View code
-          E-learning landing page HTML CSS View project View code Todo
-          web app HTML CSS JavaScript View project View code
-          Entertainment web app HTML CSS JavaScript View project View
-          code Memory Game HTML CSS JavaScript View project View code
-          Art gallery showcase HTML CSS JavaScript View project View
-          code
+          <header>
+            <h2 class="projects-title">Projects</h2>
+            <a href="" class="button">Contact me</a>
+          </header>
+          <div class="projects-grid">
+            <!-- project 1 -->
+            <div class="project-item">
+              <picture>
+                <source
+                  srcset="
+                    ./assets/images/thumbnail-project-1-large.webp
+                  "
+                  media="(min-width: 68.75em)" />
+                <img
+                  src="./assets/images/thumbnail-project-1-small.webp"
+                  alt="A screenshot of a graphic designer's personal portfolio website"
+                  class="project-item__img" 
+                  />
+              </picture>
+              <h3 class="project-item__title">Design portfolio</h3>
+              <div class="project-item__tags">
+                <span>HTML</span>
+                <span>CSS</span>
+              </div>
+              <div class="project-item__links">
+                <a href="" class="button">View project</a>
+                <a href="" class="button">View code</a>
+              </div>
+            </div>
+            <!-- project 2 -->
+            <div class="project-item">
+              <picture>
+                <source
+                  srcset="
+                    ./assets/images/thumbnail-project-2-large.webp
+                  "
+                  media="(min-width: 68.75em)" />
+                <img
+                  src="./assets/images/thumbnail-project-2-small.webp"
+                  alt="A screenshot of a e-learning landing page."
+                  class="project-item__img" 
+                  />
+              </picture>
+              <h3 class="project-item__title">E-learning landing page</h3>
+              <div class="project-item__tags">
+                <span>HTML</span>
+                <span>CSS</span>
+              </div>
+              <div class="project-item__links">
+                <a href="" class="button">View project</a>
+                <a href="" class="button">View code</a>
+              </div>
+            </div>
+            <!-- project 3 -->
+            <div class="project-item">
+              <picture>
+                <source
+                  srcset="
+                    ./assets/images/thumbnail-project-3-large.webp
+                  "
+                  media="(min-width: 68.75em)" />
+                <img
+                  src="./assets/images/thumbnail-project-3-small.webp"
+                  alt="A screenshot of a todo list web app."
+                  class="project-item__img" 
+                  />
+              </picture>
+              <h3 class="project-item__title">Todo web app</h3>
+              <div class="project-item__tags">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+              </div>
+              <div class="project-item__links">
+                <a href="" class="button">View project</a>
+                <a href="" class="button">View code</a>
+              </div>
+            </div>
+            <!-- project 4 -->
+            <div class="project-item">
+              <picture>
+                <source
+                  srcset="
+                    ./assets/images/thumbnail-project-4-large.webp
+                  "
+                  media="(min-width: 68.75em)" />
+                <img
+                  src="./assets/images/thumbnail-project-4-small.webp"
+                  alt="A screenshot of a video Entertainment website."
+                  class="project-item__img"       
+                  />
+              </picture>
+              <h3 class="project-item__title">Entertainment web app</h3>
+              <div class="project-item__tags">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+              </div>
+              <div class="project-item__links">
+                <a href="" class="button">View project</a>
+                <a href="" class="button">View code</a>
+              </div>
+            </div>
+            <!-- project 5 -->
+            <div class="project-item">        
+              <picture>
+                <source
+                  srcset="
+                    ./assets/images/thumbnail-project-5-large.webp
+                  "
+                  media="(min-width: 68.75em)" />
+                <img
+                  src="./assets/images/thumbnail-project-5-small.webp"
+                  alt="A screenshot of a memory game website"
+                  class="project-item__img" 
+                  />
+              </picture>
+              <h3 class="project-item__title">Memory Game</h3>
+              <div class="project-item__tags">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+              </div>
+              <div class="project-item__links"> 
+                <a href="" class="button">View project</a>
+                <a href="" class="button">View code</a>
+              </div>
+            </div>
+            <!-- project 6 -->
+            <div class="project-item">
+              <picture>
+                <source
+                  srcset="
+                    ./assets/images/thumbnail-project-6-large.webp
+                  "
+                  media="(min-width: 68.75em)" />
+                <img
+                  src="./assets/images/thumbnail-project-6-small.webp"
+                  alt="A screenshot of an art gallery website."
+                  class="project-item__img" 
+                  />
+              </picture>
+              <h3 class="project-item__title">Art gallery showcase</h3>
+              <div class="project-item__tags">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+              </div>
+              <div class="project-item__links">
+                <a href="" class="button">View project</a>
+                <a href="" class="button">View code</a>
+              </div>
+            </div>
+          </div>
+
         </div>
       </section>
+      <!-- Contact section -->
       <section class="contact">
         <div class="wrapper">
-          Contact I would love to hear about your project and how I could
-          help. Please fill in the form, and I’ll get back to you as soon
-          as possible. Name Email Message Send message 
-
+          Contact I would love to hear about your project and how I
+          could help. Please fill in the form, and I’ll get back to
+          you as soon as possible. Name Email Message Send message
         </div>
       </section>
     </main>
