@@ -110,7 +110,6 @@ body {
   font-family: 'Space Grotesk', sans-serif;
   font-size: var(--fs-body);
   line-height: 1.56;
-
   background-color: var(--clr-black);
   color: var(--clr-white);
 }
@@ -206,6 +205,7 @@ a.button:focus {
 /* Header */
 .header {
   position: relative;
+  overflow-x: hidden;
   margin-inline: auto;
   max-width: var(--container);
 }
@@ -257,6 +257,12 @@ a.button:focus {
   }
 }
 
+@media (min-width: 68.75em) {
+  .header {
+    overflow-x: visible;
+  }
+}
+
 /* Hero Section */
 .hero-wrapper {
   padding-bottom: 80px;
@@ -264,7 +270,6 @@ a.button:focus {
 
 .hero-img-container {
   position: relative;
-  overflow-x: hidden;
   z-index: -25;
 }
 
@@ -404,11 +409,14 @@ a.button:focus {
   }
 }
 
-/* Skills */
-.skills {
-  padding: 40px 0;
+.main {
   position: relative;
-  overflow-x: hidden;
+  overflow: hidden;
+}
+
+/* Skills Section*/
+.skills {
+  position: relative;
 }
 
 .rings-container__skills {
@@ -418,6 +426,7 @@ a.button:focus {
 }
 
 .skills-grid {
+  padding-block: 40px;
   display: grid;
   gap: 24px;
 }
@@ -439,15 +448,16 @@ a.button:focus {
 
 @media (min-width: 40em) {
   .skills {
-    border: none;
+    /* border: none; */
   }
   .rings-container__skills {
     left: 80%;
-    bottom: 32px;
+    bottom: 40px;
   }
   .skills-grid {
     grid-template-columns: 1fr 1fr;
     row-gap: 50px;
+    border: none;
   }
   .skill-card {
     text-align: left;
@@ -465,8 +475,8 @@ a.button:focus {
   }
 
   .rings-container__skills {
-    left: 88%;
-    bottom: 72px;
+    left: 80%;
+    bottom: 120px;
   }
 }
 
