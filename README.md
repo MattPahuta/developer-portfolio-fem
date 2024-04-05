@@ -74,6 +74,7 @@ Use this section to outline areas that you want to continue focusing on in futur
 
 - [Coder Coder](https://www.example.com) - Part way into my development of this project, I found Jessica Chan's video walkthrough on YouTube. I made quite a few different choices as what Jessica went with, but her video walkthrough of the project is immensely useful for those learning more advanced CSS and for getting a sense of how an experienced developer would tackle a project like this. Also, I ran into the same scroll bar issues related to the absolutely positioned svg decorative elements. 
 Watching her troubleshoot the problem was immensely helpful. Even though my solution and individual element styling is a bit different, it definitely helped put me on the right path. Overall, dealing with these svgs was a huge pain.
+I also largely adapted her approach to handling the project item hover states for desktop. My initial solution was more convoluted and Jessica's is much more elegant.
 - [ModernCSS](https://moderncss.dev/css-button-styling-guide/) - Stephanie Eckles's button styling guid is something I keep coming back to over and over again. This project was no different.
 - [Kevin Powell](https://www.youtube.com/@KevinPowell/featured) - I began tackling the header/hero layout in a similar way Jessica approached the issue, using absolutely positioned elements. Then, I remembered a YouTube short by Kevin Powell where he talked about stacking content with grid. I didn't find the specific short (but I'm sure its in his channel somewhere) but luckily I made a note about his approach and was able to use it here. I don't know if this is necessarily more efficient or easier to understand than positioning the elements absolutely, but here it is.
 
@@ -81,12 +82,10 @@ Watching her troubleshoot the problem was immensely helpful. Even though my solu
 
 - Website - [Matt Pahuta](https://www.mattpahuta.com)
 - Frontend Mentor - [@mattpahuta](https://www.frontendmentor.io/profile/MattPahuta)
-- Twitter - [@mattpahuta](https://www.twitter.com/MattPahuta)
+- Twitter/X - [@mattpahuta](https://www.twitter.com/MattPahuta)
 - LinkedIn - [Matt Pahuta](www.linkedin.com/in/mattpahuta)
 
 
 ## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
 
 As mentioned above, part way along my development of this project I reviewed Jessica Chan's approach to the challenge. I want to call out several areas of the code I ended up revising based on the approach Jessica took, Including my somewhat clumsy implementation of the uderline text-decoration of the hero accent text in favor of her background-image w/linear-gradient solution. However, for the links with similar accent styles, I went with something closer to Stephanie Eckles' approach to styling links as buttons.

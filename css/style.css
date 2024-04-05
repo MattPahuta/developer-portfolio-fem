@@ -10,15 +10,10 @@ Date: March 2024
   /* Fonts */
   --ff-primary: 'Space Grotesk', sans-serif;
   /* Font Sizes */
-  /* ToDo: convert to meaningful var names */
   --fs-body: 1rem;
   --fs-heading-med: 1.5rem;
-  --fs-32: 2rem;
-  --fs-headline: 2.5rem;
-  --fs-subtitle: 2rem;
-  --fs-48: 3rem;
-  --fs-72: 4.5rem;
-  --fs-88: 5.5rem;
+  --fs-heading-xl: 2.5rem;
+  --fs-heading-lrg: 2rem;
   /* Colors */
   --clr-black: hsl(0, 0%, 8%);
   --clr-white: hsl(0, 0%, 100%);
@@ -26,28 +21,23 @@ Date: March 2024
   --clr-gray: hsl(0, 0%, 59%);
   --clr-accent: hsl(153, 71%, 59%);
   --clr-warning: hsl(7, 100%, 68%);
-
   /* Utilities */
   --container: 69.375rem;
   --transition-primary: 220ms ease-in-out;
-
-  /* Border radius */
-  --br-soft: 1rem;
-  --br-round: 50%;
+  --transition-secondary: 400ms ease-in-out;
 }
 
-/* ToDo: include media query for root to handle font size change */
 @media (min-width: 40em) {
   :root {
     --fs-body: 1.125rem;
-    --fs-headline: 4.5rem;
-    --fs-subtitle: 3rem;
+    --fs-heading-xl: 4.5rem;
+    --fs-heading-lrg: 3rem;
   }
 }
 
 @media (min-width: 68.75em) {
   :root {
-    --fs-headline: 5.5rem;
+    --fs-heading-xl: 5.5rem;
   }
 }
 
@@ -130,8 +120,9 @@ body {
   max-width: var(--container);
 }
 
-a {
-  transition: color var(--transition-primary);
+a,
+a.button {
+  transition: all var(--transition-primary);
 }
 
 .accent-underline {
@@ -161,13 +152,21 @@ a.button {
   border-bottom: 2px solid var(--clr-accent);
 }
 
-a:hover,
-a.button:hover {
+a.title-link:hover,
+a.button:hover,
+a.title-link:focus-within,
+a.button:focus-within {
   color: var(--clr-accent);
   cursor: pointer;
 }
 
-a.button:focus {
+a.title-link:focus-within,
+a.button:focus-within {
+  padding-inline: 6px;
+}
+
+a.title-link:focus-within,
+a.button:focus-within {
   outline-style: solid;
   outline-color: transparent;
   box-shadow: 0 0 0 2px var(--clr-accent);
@@ -198,7 +197,6 @@ a.button:focus {
 @media (min-width: 68.75em) {
   .wrapper {
     width: 100%;
-    /* padding-inline: 30px; */
   }
 }
 
@@ -237,12 +235,20 @@ a.button:focus {
   gap: 25px;
 }
 
-.social-icon > path {
+.social-link .social-icon > path {
   transition: fill var(--transition-primary);
 }
 
-.social-icon:hover > path {
+.social-link:hover .social-icon > path,
+.social-link:focus-within .social-icon > path {
   fill: var(--clr-accent);
+}
+
+.social-icon:focus-within,
+a.social-link:focus,
+a.social-link:focus-within {
+  outline-color: var(--clr-accent);
+  outline-offset: 3px;
 }
 
 @media (min-width: 40em) {
@@ -315,7 +321,7 @@ a.button:focus {
   margin-bottom: 20px;
   margin-inline: auto;
   max-width: 14ch;
-  font-size: var(--fs-headline);
+  font-size: var(--fs-heading-xl);
   line-height: 1;
   letter-spacing: -1.14px;
 }
@@ -437,7 +443,7 @@ a.button:focus {
 
 .skill-card h3 {
   margin-bottom: 5px;
-  font-size: var(--fs-subtitle);
+  font-size: var(--fs-heading-lrg);
   line-height: 1.25;
 }
 
@@ -447,9 +453,6 @@ a.button:focus {
 }
 
 @media (min-width: 40em) {
-  .skills {
-    /* border: none; */
-  }
   .rings-container__skills {
     left: 80%;
     bottom: 40px;
@@ -468,14 +471,12 @@ a.button:focus {
   .skills {
     padding-block: 72px;
   }
-
   .skills-grid {
     grid-template-columns: repeat(3, 1fr);
     gap: 58px 30px;
   }
-
   .rings-container__skills {
-    left: 80%;
+    left: 74%;
     bottom: 120px;
   }
 }
@@ -492,9 +493,8 @@ a.button:focus {
   justify-content: space-between;
 }
 
-/* ToDo: rename to heading-xl? */
 .projects-title {
-  font-size: var(--fs-headline);
+  font-size: var(--fs-heading-xl);
 }
 
 .projects-grid {
@@ -504,10 +504,10 @@ a.button:focus {
 }
 
 .project-item__img {
-	/* width: 100%;
+  /* width: 100%;
 	max-width: 500px; */
-	/* margin-block-end: 20px; */
-	object-fit: cover;
+  /* margin-block-end: 20px; */
+  object-fit: cover;
 }
 
 .project-item__title {
@@ -568,13 +568,14 @@ a.button:focus {
     top: 0;
     background-color: var(--clr-black);
     opacity: 0;
-    transition: opacity 150ms ease-in-out;
+    transition: opacity var(--transition-primary);
   }
 
   .project-item__links {
     place-self: center;
     opacity: 0;
     z-index: 10;
+    transition: opacity var(--transition-secondary);
   }
 
   .project-item__links a.button {
@@ -590,5 +591,4 @@ a.button:focus {
   .project-item:focus-within .project-item__links {
     opacity: 1;
   }
-
 }
