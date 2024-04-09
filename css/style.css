@@ -136,7 +136,13 @@ a.button {
   background-size: 8px 4px;
 }
 
-a.button {
+button.button {
+  background: transparent;
+  border: none;
+}
+
+a.button,
+button.button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -155,23 +161,28 @@ a.button {
 a.title-link:hover,
 a.button:hover,
 a.title-link:focus-within,
-a.button:focus-within {
+a.button:focus-within,
+button.button:hover,
+button.button:focus-visible {
   color: var(--clr-accent);
   cursor: pointer;
 }
 
-a.title-link:focus-within,
+/* a.title-link:focus-within,
 a.button:focus-within {
   padding-inline: 6px;
-}
+} */
 
 a.title-link:focus-within,
-a.button:focus-within {
+a.button:focus-within,
+button.button:focus-within {
+  padding-inline: 6px;
   outline-style: solid;
   outline-color: transparent;
   box-shadow: 0 0 0 2px var(--clr-accent);
   border: none;
 }
+
 
 .stacked {
   display: grid;
@@ -184,6 +195,12 @@ a.button:focus-within {
 
 .bottom-border {
   border-bottom: 1px solid var(--clr-white);
+}
+
+.section-title {
+  font-size: var(--fs-heading-xl);
+  line-height: 1;
+  letter-spacing: -2.5px;
 }
 
 /* tablet and above */
@@ -591,4 +608,66 @@ a.social-link:focus-within {
   .project-item:focus-within .project-item__links {
     opacity: 1;
   }
+}
+
+/* Contact Section */
+.contact {
+  padding-block: 60px;
+  background-color: var(--clr-dark-gray);
+}
+
+.contact-wrapper {
+  padding-block-end: 80px;
+}
+
+.contact-text {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.contact-title {
+  margin-bottom: 20px;
+}
+
+.contact-form {
+  display: grid;
+  gap: 16px;
+}
+
+.form-control input, 
+.form-control textarea {
+  width: 100%;
+  padding-inline: 24px;
+  color: var(--clr-white);
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid var(--clr-white);
+}
+
+.form-control input {
+  padding-block: 16px;
+}
+
+.form-control textarea {
+  padding-block: 16px 40px;
+}
+
+.form-control input:focus-visible,
+.form-control textarea:focus-visible {
+  /* border-color: var(--clr-accent);
+  outline-color: var(--clr-accent); */
+  outline: none;
+  border: 2px solid var(--clr-accent);
+}
+
+.form-control > *::placeholder {
+  color: var(--clr-white);
+  opacity: 0.5;
+  text-transform: uppercase;
+  letter-spacing: -0.22px;
+}
+
+.contact-button {
+  margin-top: 16px;
+  justify-self: end;
 }
