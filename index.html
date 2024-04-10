@@ -19,6 +19,7 @@
       href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap"
       rel="stylesheet" />
     <link rel="stylesheet" href="./css/style.css" />
+    <script src="./js/main.js" defer></script>
     <title>Adam Keyes Web Devloper</title>
   </head>
   <body>
@@ -320,45 +321,59 @@
       <!-- Contact section -->
       <section class="contact">
         <div class="wrapper contact-wrapper bottom-border">
-          <div class="contact-text">
-            <h2 class="contact-title section-title">Contact</h2>
-            <p>
-              I would love to hear about your project and how I could
-              help. Please fill in the form, and I'll get back to you
-              as soon as possible.
-            </p>
-          </div>
+          <div class="contact-grid">
+            <div class="contact-text">
+              <h2 class="contact-title section-title">Contact</h2>
+              <p>
+                I would love to hear about your project and how I could
+                help. Please fill in the form, and I'll get back to you
+                as soon as possible.
+              </p>
+            </div>
 
-          <form class="contact-form">
-            <div class="form-control">
-              <label for="contact-name" class="visually-hidden"
-                >Name</label
-              >
-              <input
-                type="text"
-                id="contact-name"
-                placeholder="Name" />
-            </div>
-            <div class="form-control">
-              <label for="contact-email" class="visually-hidden"
-                >Email</label
-              >
-              <input
-                type="email"
-                id="contact-email"
-                placeholder="Email" />
-            </div>
-            <div class="form-control">
-              <label for="contact-message" class="visually-hidden"
-                >Message</label
-              >
-              <textarea id="contact-message" placeholder="Message">
-              </textarea>
-            </div>
-            <button type="submit" class="button contact-button">
-              Send message
-            </button>
-          </form>
+            <form id="contact-form" class="contact-form">
+              <div class="form-control">
+                <label for="contact-name" class="visually-hidden"
+                  >Name</label
+                >
+                <input
+                  class="form-input"
+                  type="text"
+                  id="contact-name"
+                  placeholder="Name"
+                  autocomplete="name"
+                  required />
+              </div>
+              <div class="form-control">
+                <label for="contact-email" class="visually-hidden"
+                  >Email</label
+                >
+                <input
+                  class="form-input"
+                  type="email"
+                  id="contact-email"
+                  placeholder="Email"
+                  autocomplete="email"
+                  required />
+              </div>
+              <div class="form-control">
+                <label for="contact-message" class="visually-hidden"
+                  >Message</label
+                >
+                <textarea
+                  id="contact-message"
+                  class="form-textarea"
+                  cols="30"
+                  rows="3"
+                  placeholder="Message"
+                  required></textarea>
+              </div>
+              <button type="submit" class="button contact-button">
+                Send message
+              </button>
+            </form>
+
+          </div>
         </div>
       </section>
     </main>
