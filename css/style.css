@@ -168,11 +168,6 @@ button.button:focus-visible {
   cursor: pointer;
 }
 
-/* a.title-link:focus-within,
-a.button:focus-within {
-  padding-inline: 6px;
-} */
-
 a.title-link:focus-within,
 a.button:focus-within,
 button.button:focus-within {
@@ -182,7 +177,6 @@ button.button:focus-within {
   box-shadow: 0 0 0 2px var(--clr-accent);
   border: none;
 }
-
 
 .stacked {
   display: grid;
@@ -201,6 +195,15 @@ button.button:focus-within {
   font-size: var(--fs-heading-xl);
   line-height: 1;
   letter-spacing: -2.5px;
+}
+
+.rings-container {
+  width: 530px;
+  height: 129px;
+  background: url('../assets/images/pattern-rings.svg');
+  background-repeat: no-repeat;
+  /* background-size: cover; */
+  position: absolute;
 }
 
 /* tablet and above */
@@ -301,14 +304,8 @@ a.social-link:focus-within {
   max-width: 10.875rem;
 }
 
-.rings-container,
+.rings-container__header,
 .rings-container__skills {
-  width: 530px;
-  height: 129px;
-  background: url('../assets/images/pattern-rings.svg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: absolute;
   z-index: -40;
 }
 
@@ -646,6 +643,12 @@ a.social-link:focus-within {
   gap: 16px;
 }
 
+.form-control {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
 .form-input, 
 .form-textarea {
   width: 100%;
@@ -657,11 +660,18 @@ a.social-link:focus-within {
   border-bottom: 1px solid var(--clr-white);
 }
 
-.form-input:focus-visible,
-.form-textarea:focus-visible {
-  outline: none;
-  border: 2px solid var(--clr-accent);
+/* Handle the warning colors/icon with JavaScript? */
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--clr-accent);
+  outline-offset: 2px;
+  border-bottom: 2px solid var(--clr-accent);
 }
+
+/* input:invalid,
+textarea:invalid {
+  outline-color: var(--clr-warning);
+} */
 
 .form-input::placeholder,
 .form-textarea::placeholder {
@@ -671,20 +681,48 @@ a.social-link:focus-within {
   letter-spacing: -0.22px;
 }
 
-/* .form-input:invalid {
-  border-color: var(--clr-warning);
-} */
+/* Add this icon to html via JavaScript? */
+form .contact-form__invalid-icon {
+  position: absolute;
+  right: 0;
+  display: none;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.textarea-wrapper > .contact-form__invalid-icon {
+  top: 16px;
+}
+
 
 .contact-button {
   margin-top: 16px;
   justify-self: end;
 }
 
+.rings-container__contact {
+  right: 50%;
+  bottom: 0;
+  translate: 0 -115%;
+}
+
+/* *** ToDo: max-width values for sections/wrappers to eliminate edge-to-edge between mobile/tablet/desktop transition ?? */
+
 @media (min-width: 40em) {
 
+  .rings-container__contact {
+    right: 84%;
+    translate: 0 -65%;
+  }
 }
 
 @media (min-width: 68.75em) {
+
+  .rings-container__contact {
+    right: 74%;
+    translate: 0 -95%;
+  }
+
   .contact-grid {
     margin: 0;
     /* max-width: 100%; */
