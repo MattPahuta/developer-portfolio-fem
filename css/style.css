@@ -673,10 +673,15 @@ textarea:focus-visible {
   border-bottom: 2px solid var(--clr-accent);
 }
 
-/* input:invalid,
+input:invalid,
 textarea:invalid {
   outline-color: var(--clr-warning);
-} */
+  border-color: var(--clr-warning);
+}
+
+.invalid-input {
+  border-bottom: 1px solid var(--clr-warning);
+}
 
 .form-input::placeholder,
 .form-textarea::placeholder {
@@ -697,6 +702,17 @@ form .contact-form__invalid-icon {
 
 .textarea-wrapper > .contact-form__invalid-icon {
   top: 16px;
+}
+
+.form-control__message {
+  display: none;
+  position: absolute;
+  right: 0;
+  bottom: -20px;
+  font-size: 0.875rem;
+  line-height: 1.1;
+  letter-spacing: -0.17px;
+  color: var(--clr-warning)
 }
 
 

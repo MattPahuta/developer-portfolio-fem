@@ -1,6 +1,6 @@
 # Single Page Developer Portfolio - A Frontend Mentor challenge
 
-This is a solution to the [Single-page developer portfolio challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/singlepage-developer-portfolio-bBVj2ZPi-x). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+This is a solution to the [Single-page developer portfolio challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/singlepage-developer-portfolio-bBVj2ZPi-x). 
 
 ## Table of contents
 
@@ -23,8 +23,13 @@ This is a solution to the [Single-page developer portfolio challenge on Frontend
 
 Users should be able to:
 
-- Example: View the optimal layout for the interface depending on their device's screen size
-- Example: See hover and focus states for all interactive elements on the page
+- Receive an error message when the `form` is submitted if:
+  - Any field is empty
+  - The email address is not formatted correctly
+- View the optimal layout for the interface depending on their device's screen size
+- See hover and focus states for all interactive elements on the page
+- **Bonus**: Hook the form up so it sends and stores the user's enquiry (you can use a spreadsheet or Airtable to save the enquiries)
+- **Bonus**: Add your own details (image, skills, projects) to replace the ones in the design
 
 ### Screenshot
 
@@ -77,6 +82,8 @@ Watching her troubleshoot the problem was immensely helpful. Even though my solu
 I also largely adapted her approach to handling the project item hover states for desktop. My initial solution was more convoluted and Jessica's is much more elegant.
 - [ModernCSS](https://moderncss.dev/css-button-styling-guide/) - Stephanie Eckles's button styling guid is something I keep coming back to over and over again. This project was no different.
 - [Kevin Powell](https://www.youtube.com/@KevinPowell/featured) - I began tackling the header/hero layout in a similar way Jessica approached the issue, using absolutely positioned elements. Then, I remembered a YouTube short by Kevin Powell where he talked about stacking content with grid. I didn't find the specific short (but I'm sure its in his channel somewhere) but luckily I made a note about his approach and was able to use it here. I don't know if this is necessarily more efficient or easier to understand than positioning the elements absolutely, but here it is.
+- [Frontend Mentor](https://www.frontendmentor.io/learning-paths/javascript-fundamentals-oR7g6-mTZ-) - Handling form validation and data is an essential task for developers and brushing up on best practice approaches is something I come back to again and again. Working through Frontend Mentor's JavaScript Fundamentals learning path has been an excellent resource.
+- [FreeCodeCamp](https://www.freecodecamp.org/news/build-and-validate-beautiful-forms-with-vanilla-html-css-js/) - A brilliant article published over at FreeCodeCamp and referenced in the Frontend Mentor JavaScript Learning Path. 
 
 ## Author
 
