@@ -704,6 +704,10 @@ form .contact-form__invalid-icon {
   top: 16px;
 }
 
+.invalid-message-icon {
+  transform: translate(0, 200%);
+}
+
 .form-control__message {
   display: none;
   position: absolute;
@@ -714,7 +718,6 @@ form .contact-form__invalid-icon {
   letter-spacing: -0.17px;
   color: var(--clr-warning)
 }
-
 
 .contact-button {
   margin-top: 16px;

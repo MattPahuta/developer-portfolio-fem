@@ -1,10 +1,4 @@
-console.log('Scripts connected');
-
-const form = document.getElementById('contact-form');
-
-const nameInput = document.getElementById('contact-name');
-const emailInput = document.getElementById('contact-email');
-const messageInput = document.getElementById('contact-message');
+let isFormError = false;
 
 function validateName(name) {
   if (!name) return 'Name is required';
@@ -24,63 +18,82 @@ function validateEmail(email) {
   return '';
 }
 
-function validateMessage(message) {
-  if (!message) return 'A message is required';
 
-  if(message.length < 20) {
-    return `That's a short message. Please tell me more.`
-  }
 
-  return '';
-}
 
 function handleSubmit(e) {
   e.preventDefault(e);
-
+  const nameInput = document.getElementById('contact-name');
+  const emailInput = document.getElementById('contact-email');
+  const messageInput = document.getElementById('contact-message');
+  // get form data
   const formDataEntries = new FormData(e.target).entries();
   const { name, email, message } = Object.fromEntries(formDataEntries);
-
-  console.log(message.length)
-
   // custom form message containers
   const nameError = document.querySelector('.invalid-name');
   const emailError = document.querySelector('.invalid-email');
-  const invalidMessage = document.querySelector('.invalid-message'); 
+  const messageError = document.querySelector('.invalid-message');
+  const invalidNameIcon = document.querySelector('#invalid-name-icon'); 
+  const invalidEmailIcon = document.querySelector('#invalid-email-icon'); 
+  const invalidMessageIcon = document.querySelector('#invalid-message-icon');
+
 
   // handle submit of name
   if (!name) {
     nameError.style.display = 'block';
     nameError.textContent = 'Please enter your name'
+    invalidNameIcon.style.display = 'block'
+    isFormError = true;
   } else {
     nameError.style.display = 'none';
+    nameError.textContent = '';
+    invalidNameIcon.style.display = 'none'
+    isFormError = false;
   }
 
-  // handle submit of email
   const emailErrorMessage = validateEmail(email);
 
   if (emailErrorMessage) {
     emailError.style.display = 'block';
     emailError.innerText = emailErrorMessage;
+    invalidEmailIcon.style.display = 'block'
+    isFormError = true;
   } else {
     emailError.style.display = 'none';
+    emailError.innerText = '';
+    invalidEmailIcon.style.display = 'none'
+    isFormError = false;
   }
 
-  // handle submit of message
-  const messageErrorMessage = validateMessage(message);
+  // function errorMessage(message) {
+  //   if (!message) return 'A message is required';
+  
+  //   if (message.length < 20) {
+  //     return `That's a short message. Please tell me more.`
+  //   }
+  
+  //   return '';
+  // }
 
-  if (messageErrorMessage) {
-    invalidMessage.style.display = 'block';
-    invalidMessage.innerText = messageErrorMessage;
+  if (!message) {
+    messageError.style.display = 'block';
+    messageError.innerText = 'A message is required';
+    invalidMessageIcon.style.display = 'block'
+    isFormError = true;
+    return;
   } else {
-    invalidMessage.style.display = 'none';
+    messageError.style.display = 'none';
+    messageError.innerText = '';
+    invalidMessageIcon.style.display = 'none'
+    isFormError = false; 
   }
 
-  // clear inputs on submission
-  nameInput.value = '';
-  emailInput.value = '';
-  messageInput.value = '';
-
+  if (!isFormError) {
+    nameInput.value = '';
+    emailInput.value = '';
+    messageInput.value = '';
+  }
 
 }
 
-form.addEventListener('submit', handleSubmit)                
+document.getElementById('contact-form').addEventListener('submit', handleSubmit)                
