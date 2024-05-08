@@ -203,13 +203,11 @@ button.button:focus-within {
   height: 129px;
   background: url('../assets/images/pattern-rings.svg');
   background-repeat: no-repeat;
-  /* background-size: cover; */
   position: absolute;
 }
 
 /* tablet and above */
 @media (min-width: 40em) {
-  /* 640px */
   .wrapper {
     width: calc(100% - 3.75rem); /* 30px each side */
   }
@@ -241,7 +239,6 @@ button.button:focus-within {
 }
 
 .title-link {
-  /* 24, 32 */
   font-size: clamp(1.5rem, 1rem + 2vw, 2rem);
   line-height: 1;
   color: var(--clr-white);
@@ -523,9 +520,6 @@ a.social-link:focus-within {
 }
 
 .project-item__img {
-  /* width: 100%;
-	max-width: 500px; */
-  /* margin-block-end: 20px; */
   object-fit: cover;
 }
 
@@ -624,7 +618,6 @@ a.social-link:focus-within {
 
 .contact-grid {
   margin-inline: auto;
-  /* max-width: 500px; */
 }
 
 .contact-text {
@@ -769,12 +762,6 @@ form .contact-form__invalid-icon {
   background: var(--clr-dark-gray);
   padding-block-end: 40px;
 }
-
-/* @media (min-width: 40em) {
-  .footer {
-    padding-block: 30px 40px;
-  }
-} */
 
 @media (min-width: 68.75em) {
   .footer {

@@ -18,9 +18,6 @@ function validateEmail(email) {
   return '';
 }
 
-
-
-
 function handleSubmit(e) {
   e.preventDefault(e);
   const nameInput = document.getElementById('contact-name');
@@ -36,7 +33,6 @@ function handleSubmit(e) {
   const invalidNameIcon = document.querySelector('#invalid-name-icon'); 
   const invalidEmailIcon = document.querySelector('#invalid-email-icon'); 
   const invalidMessageIcon = document.querySelector('#invalid-message-icon');
-
 
   // handle submit of name
   if (!name) {
@@ -64,16 +60,6 @@ function handleSubmit(e) {
     invalidEmailIcon.style.display = 'none'
     isFormError = false;
   }
-
-  // function errorMessage(message) {
-  //   if (!message) return 'A message is required';
-  
-  //   if (message.length < 20) {
-  //     return `That's a short message. Please tell me more.`
-  //   }
-  
-  //   return '';
-  // }
 
   if (!message) {
     messageError.style.display = 'block';

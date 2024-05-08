@@ -28,8 +28,6 @@ Users should be able to:
   - The email address is not formatted correctly
 - View the optimal layout for the interface depending on their device's screen size
 - See hover and focus states for all interactive elements on the page
-- **Bonus**: Hook the form up so it sends and stores the user's enquiry (you can use a spreadsheet or Airtable to save the enquiries)
-- **Bonus**: Add your own details (image, skills, projects) to replace the ones in the design
 
 ### Screenshot
 
@@ -50,40 +48,42 @@ Users should be able to:
 - Flexbox
 - CSS Grid
 - Mobile-first workflow
+- Vanilla JavaScript
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+Cited below in the useful resources section, this simple CSS Grid setup was quite useful in dealing with some of the trickier layouts of this project.
 
-To see how you can add code snippets, see below:
-
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
 ```css
-.proud-of-this-css {
-  color: papayawhip;
+.stacked {
+  display: grid;
+}
+
+.stacked > * {
+  grid-column: 1 / -1;
+  grid-row: 1/ -1;
 }
 ```
+
+I haven't worked with forms much lately so it was nice to brush up on this simple and effective practice for collecting form data.
 ```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
+const formDataEntries = new FormData(e.target).entries();
+const { name, email, message } = Object.fromEntries(formDataEntries);
 ```
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
+Biggest pain points for me with this project were handling the absolutely positioned decorative graphics and the error handling for the form. I'm willing to accept that positioning elements absolutely and moving them around on varying screen sizes will always be difficult. But this project with its simple form element was a good reminder that I need to dedicate more time and effort toward improving my expertise with forms.
 
 ### Useful resources
 
 - [Coder Coder](https://www.example.com) - Part way into my development of this project, I found Jessica Chan's video walkthrough on YouTube. I made quite a few different choices as what Jessica went with, but her video walkthrough of the project is immensely useful for those learning more advanced CSS and for getting a sense of how an experienced developer would tackle a project like this. Also, I ran into the same scroll bar issues related to the absolutely positioned svg decorative elements. 
 Watching her troubleshoot the problem was immensely helpful. Even though my solution and individual element styling is a bit different, it definitely helped put me on the right path. Overall, dealing with these svgs was a huge pain.
 I also largely adapted her approach to handling the project item hover states for desktop. My initial solution was more convoluted and Jessica's is much more elegant.
-- [ModernCSS](https://moderncss.dev/css-button-styling-guide/) - Stephanie Eckles's button styling guid is something I keep coming back to over and over again. This project was no different.
-- [Kevin Powell](https://www.youtube.com/@KevinPowell/featured) - I began tackling the header/hero layout in a similar way Jessica approached the issue, using absolutely positioned elements. Then, I remembered a YouTube short by Kevin Powell where he talked about stacking content with grid. I didn't find the specific short (but I'm sure its in his channel somewhere) but luckily I made a note about his approach and was able to use it here. I don't know if this is necessarily more efficient or easier to understand than positioning the elements absolutely, but here it is.
+- [ModernCSS](https://moderncss.dev/css-button-styling-guide/) - Stephanie Eckles's button styling guide is something I keep coming back to. This project was no different.
+- [Kevin Powell](https://www.youtube.com/@KevinPowell/featured) - I began tackling the header/hero layout in a similar way Jessica approached the issue, using absolutely positioned elements. Then, I remembered a YouTube short by Kevin Powell where he talked about stacking content with Grid. I didn't find the specific short (but I'm sure its in his channel somewhere) but luckily I made a note about his approach and was able to use it here. I don't know if this is necessarily more efficient or easier to understand than positioning the elements absolutely, but it worked well for me.
 - [Frontend Mentor](https://www.frontendmentor.io/learning-paths/javascript-fundamentals-oR7g6-mTZ-) - Handling form validation and data is an essential task for developers and brushing up on best practice approaches is something I come back to again and again. Working through Frontend Mentor's JavaScript Fundamentals learning path has been an excellent resource.
-- [FreeCodeCamp](https://www.freecodecamp.org/news/build-and-validate-beautiful-forms-with-vanilla-html-css-js/) - A brilliant article published over at FreeCodeCamp and referenced in the Frontend Mentor JavaScript Learning Path. 
+- [FreeCodeCamp](https://www.freecodecamp.org/news/build-and-validate-beautiful-forms-with-vanilla-html-css-js/) - A helpful article published over at FreeCodeCamp and referenced in the Frontend Mentor JavaScript Learning Path. 
 
 ## Author
 
@@ -95,4 +95,4 @@ I also largely adapted her approach to handling the project item hover states fo
 
 ## Acknowledgments
 
-As mentioned above, part way along my development of this project I reviewed Jessica Chan's approach to the challenge. I want to call out several areas of the code I ended up revising based on the approach Jessica took, Including my somewhat clumsy implementation of the uderline text-decoration of the hero accent text in favor of her background-image w/linear-gradient solution. However, for the links with similar accent styles, I went with something closer to Stephanie Eckles' approach to styling links as buttons.
+As mentioned above, part way along my development of this project I reviewed Jessica Chan's approach to the challenge. I want to call out several areas of the code I ended up revising based on the approach Jessica took, Including my somewhat clumsy implementation of the underline text-decoration of the hero accent text in favor of her background-image w/linear-gradient solution. However, for the links with similar accent styles, I went with something closer to Stephanie Eckles' approach to styling links as buttons.
