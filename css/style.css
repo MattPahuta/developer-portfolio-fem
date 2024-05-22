@@ -18,7 +18,7 @@ Date: March 2024
   --clr-black: hsl(0, 0%, 8%);
   --clr-white: hsl(0, 0%, 100%);
   --clr-dark-gray: hsl(0, 0%, 14%);
-  --clr-gray: hsl(0, 0%, 59%);
+  --clr-gray: hsl(0, 0%, 85%); 
   --clr-accent: hsl(153, 71%, 59%);
   --clr-warning: hsl(7, 100%, 68%);
   /* Utilities */
@@ -388,10 +388,11 @@ a.social-link:focus-within {
     display: block;
   }
   .hero-headline {
-    margin-bottom: 60px;
+    margin-bottom: 40px;
     letter-spacing: -2.05px;
   }
   .hero-description {
+    margin: 0;
     max-width: 75%;
   }
 }
@@ -406,6 +407,8 @@ a.social-link:focus-within {
   }
   .hero-text {
     padding-top: 200px;
+    align-content: start;
+    gap: 2.5rem;
   }
   .hero-img {
     max-width: 445px;
@@ -414,8 +417,7 @@ a.social-link:focus-within {
     display: inline;
   }
   .hero-headline {
-    margin-inline: 0;
-    margin-bottom: 42px;
+    margin: 0;
     letter-spacing: -2.5px;
   }
   .hero-description {
