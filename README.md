@@ -29,6 +29,9 @@ Users should be able to:
 - View the optimal layout for the interface depending on their device's screen size
 - See hover and focus states for all interactive elements on the page
 
+Future Enhancements:
+- Refine error handling for contact form submission
+
 ### Screenshot
 
 ![](./screenshot.jpg)
@@ -37,7 +40,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [Developer Portfolio](https://quiet-pavlova-f48833.netlify.app/)
 
 ## My process
 
@@ -74,6 +77,8 @@ const { name, email, message } = Object.fromEntries(formDataEntries);
 ### Continued development
 
 Biggest pain points for me with this project were handling the absolutely positioned decorative graphics and the error handling for the form. I'm willing to accept that positioning elements absolutely and moving them around on varying screen sizes will always be difficult. But this project with its simple form element was a good reminder that I need to dedicate more time and effort toward improving my expertise with forms.
+
+Additionally, this CSS file is fairly massive. If I was to restart the project, I would definitely use Sass to create more manageable components and improve the organization of the codebase.
 
 ### Useful resources
 
